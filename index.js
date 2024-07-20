@@ -1,7 +1,6 @@
 const express =require("express")
 const cors=require("cors")
 
-app.use(cors())
 
 const data = [
     {
@@ -127,6 +126,9 @@ const data = [
     ]
 
 const app=express()
+
+app.use(cors())
+
 
 app.get("/api/data",(req,res)=>{
     res.json({
